@@ -1,3 +1,5 @@
+import querystring from 'querystring';
+
 const get = (path, headers) =>
     fetch(path, headers).then((r) => r.status === 200 ? r.json() : JSON.stringify({}));
 
@@ -16,7 +18,7 @@ const getAccessToken = async () => {
             Authorization: `Basic ${basic}`,
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: JSON.stringify({
+        body: querystring.stringify({
             grant_type: 'refresh_token',
             refresh_token
         })
