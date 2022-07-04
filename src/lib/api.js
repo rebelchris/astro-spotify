@@ -8,6 +8,7 @@ const basic = import.meta.env.BASE64;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 
 const getAccessToken = async () => {
+    console.log('basic', basic);
     const response = await fetch(TOKEN_ENDPOINT, {
         method: 'POST',
         headers: {
@@ -22,8 +23,9 @@ const getAccessToken = async () => {
     return await response.json();
 };
 
-export const  getCurrentPlaying = async () => {
+export const getCurrentPlaying = async () => {
     const {access_token} = await getAccessToken();
+    console.log('at', access_token);
     return get(TOP_TRACKS_ENDPOINT, {
         headers: {
             Authorization: `Bearer ${access_token}`
