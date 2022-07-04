@@ -12,8 +12,6 @@
     "astro": "^1.0.0-beta.63"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^0.2.2",
-    "@astrojs/vercel": "^0.2.4",
-    "astro-service-worker": "^0.1.2"
+    "@astrojs/cloudflare": "^0.2.2"
   }
 }
