@@ -1,0 +1,7 @@
+name = "astro-spotify"
+main = "dist/_worker.js"
+compatibility_date = "2022-05-10"
+node_compat = true
+
+[site]
+bucket = 'dist/static'
