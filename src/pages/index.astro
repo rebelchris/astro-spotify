@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { getCurrentPlaying } from "../lib/api";
+import { getCurrentPlaying } from "./api";
 const story = await getCurrentPlaying();
 ---
 <Layout title="Welcome to Astro.">
